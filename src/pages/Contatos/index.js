@@ -5,21 +5,13 @@ import Menu from '../../components/Menu';
 import { Container } from '@material-ui/core';
 import Mensagens from '../NovosRecados/index';
 
-
-
-
-
 export default function Contatos(props) {
-
-
-
-   
 
   return (
       <Grid component="main" maxWidth="md">
         <Menu />
           
-            <Container  maxWidth="md">
+          <Container  maxWidth="md">
           
         <TituloContatos> Deixe seu contato! </TituloContatos>
         <Mensagens key={props.id} />

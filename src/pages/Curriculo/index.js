@@ -11,10 +11,6 @@ import Mensagens from '../Scraps/index';
 
 export default function Curriculo(props) {
 
-
-
-   
-
   return (
       <Grid component="main" maxWidth="md">
         <Menu />
