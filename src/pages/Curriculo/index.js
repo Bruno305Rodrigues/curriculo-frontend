@@ -31,7 +31,7 @@ export default function Curriculo(props) {
           Sei que ainda tenho muito a aprender , mas tenho certeza que vou conseguir atingir meu objetivo de ser um programador.
            </Paragrafo>
         <hr></hr>
-        <TituloContatos> Deixe seu contato para conversarmos! </TituloContatos>
+        <TituloContatos> Deixe uma mensagem! </TituloContatos>
         <Mensagens key={props.id} />
         </Container>
       </Grid>

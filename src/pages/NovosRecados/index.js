@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 
-import MeuRecado from '../../components/Recado';
+import MeuRecado from '../../components/Contato';
 import api from '../../services/api';
 
 const useStyles = makeStyles((theme) => ({
@@ -51,6 +51,7 @@ export default function Scraps() {
   const [scraps, setScraps] = useState([]);
   const [titulo, setTitulo] = useState("");
   const [telefone, setDescricao] = useState("");
+  const [email, setEmail] = useState("");
 
 
 
@@ -62,9 +63,10 @@ export default function Scraps() {
 
   async function novoScrap() {
 
-    const dados = await api.post('/recados', {
+    const dados = await api.post('/contatos', {
       name: titulo,
-      text: telefone,
+      phone: telefone,
+      email: email
 
     })
     BuscaDados()
@@ -78,7 +80,7 @@ export default function Scraps() {
   }, []);
 
   async function BuscaDados() {
-    const dados = await api.get("/recados")
+    const dados = await api.get("/")
 
     return setScraps(dados.data);
 
@@ -110,10 +112,23 @@ export default function Scraps() {
                 variant="outlined"
                 required
                 fullWidth
-                id="text"
-                label="Mensagem"
+                id="phone"
+                label="Telefone"
                 value={telefone}
                 onChange={e => setDescricao(e.target.value)}
+                onKeyDown={e => clicou(e)}
+              />
+            </Grid>
+
+            <Grid item xs={12} sm={12}>
+              <TextField
+                variant="outlined"
+                required
+                fullWidth
+                id="email"
+                label="Email"
+                value={email}
+                onChange={e => setEmail(e.target.value)}
                 onKeyDown={e => clicou(e)}
               />
             </Grid>

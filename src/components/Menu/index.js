@@ -22,6 +22,14 @@ const useStyles = makeStyles((theme) => ({
 export default function ButtonAppBar() {
   const classes = useStyles();
 
+  function trocaPagina(){
+    window.location.href = "/contatos"
+  }
+
+  function voltarInicio(){
+    window.location.href = "/"
+  }
+
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -32,8 +40,8 @@ export default function ButtonAppBar() {
           <Typography variant="h6" className={classes.title}>
             Meu Currículo
           </Typography>
-          <Button color="inherit">Skills</Button>
-          <Button color="inherit">Contato</Button>
+          <Button color="inherit"onClick={voltarInicio}>Inicio</Button>
+          <Button color="inherit" onClick={trocaPagina}>Contato</Button>
 
         </Toolbar>
       </AppBar>

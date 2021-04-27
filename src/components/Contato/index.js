@@ -7,7 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import { CardActionArea } from '@material-ui/core';
 
 
-export default function Recado(props) {
+export default function Contato(props) {
 
     // Aqui eu tenho o scrap inteiro
     // props.scrap.id -> pra deletar
@@ -20,10 +20,14 @@ export default function Recado(props) {
                    
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="h1">
-                           {props.scrap.name}
+                            {props.scrap.name}
                         </Typography>
-                        <Typography variant="body2" color="textSecondary" component="p">
-                            {props.scrap.text}
+                        <Typography variant="body2" color="textSecondary" component="h3">
+                           Telefone: {props.scrap.phone}
+                           
+                        </Typography>
+                        <Typography variant="body2" color="textSecondary" component="h3">
+                           Email: {props.scrap.email}
                            
                         </Typography>
                        
@@ -33,7 +37,7 @@ export default function Recado(props) {
                     
                     <Button size="small" color="primary"
                     >
-                        Obrigado por sua mensagem!
+                        Obrigado pelo contato!
                 </Button>
                 <hr/>
                 </CardActions>
