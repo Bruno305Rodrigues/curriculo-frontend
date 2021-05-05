@@ -6,14 +6,8 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import { CardActionArea } from '@material-ui/core';
 
-
 export default function Contato(props) {
-
-    // Aqui eu tenho o scrap inteiro
-    // props.scrap.id -> pra deletar
-  
-
-    return (
+     return (
         <Grid item key={props.scrap.titulo} xs={12} sm={12} md={6}>
             <Card>
                 <CardActionArea>
@@ -31,7 +25,7 @@ export default function Contato(props) {
                            
                         </Typography>
                        
-                    </CardContent>
+                        </CardContent>
                 </CardActionArea>
                 <CardActions>
                     
